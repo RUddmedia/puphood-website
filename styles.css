@@ -65,6 +65,18 @@ a:hover { text-decoration: underline; }
   box-shadow: var(--shadow); font-size: 16px;
 }
 .btn:hover { text-decoration: none; filter: brightness(1.04); }
+.cta-row { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; align-items: center; }
+.btn-ghost {
+  display: inline-block; background: var(--cream-card); color: var(--brown);
+  font-weight: 800; padding: 13px 24px; border-radius: 999px;
+  border: 1px solid var(--line); box-shadow: var(--shadow); font-size: 16px;
+}
+.btn-ghost:hover { text-decoration: none; filter: brightness(.98); }
+.nav-cta {
+  background: linear-gradient(180deg, var(--amber), var(--amber-deep));
+  color: #fff !important; padding: 8px 16px; border-radius: 999px; font-size: 14px;
+}
+.nav-cta:hover { text-decoration: none; filter: brightness(1.04); }
 .badge-soon {
   display: inline-block; margin-left: 10px; font-size: 13px; font-weight: 700;
   color: var(--amber-deep); background: var(--golden); padding: 6px 12px; border-radius: 999px;

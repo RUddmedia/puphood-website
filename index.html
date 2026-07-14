@@ -20,6 +20,7 @@
         <a href="#contact">Contact</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
+        <a class="nav-cta" data-appstore href="https://apps.apple.com/us/app/id6784339562">Download</a>
       </nav>
     </div>
   </header>
@@ -28,8 +29,11 @@
     <img class="logo" src="assets/logo.png" alt="Puphood app icon" />
     <h1>Train smarter. Bond deeper.</h1>
     <p class="tag">Puphood turns dog training into a simple daily habit — guided lessons, a personalized plan, and an AI coach in your pocket.</p>
-    <a class="btn" href="#features">See what's inside</a>
-    <span class="badge-soon">Coming soon to the App Store</span>
+    <div class="cta-row">
+      <a class="btn" data-appstore href="https://apps.apple.com/us/app/id6784339562">Download on the App Store</a>
+      <a class="btn-ghost" href="#features">See what's inside</a>
+    </div>
+    <span class="badge-soon">Now available on the App Store</span>
   </section>
 
   <main>
@@ -84,5 +88,17 @@
     </div>
     <p>&copy; 2026 Rudd Media LLC. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Pass a campaign token from the landing URL through to the App Store link,
+    // so App Store Connect can attribute installs by source (e.g. Meta ads).
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var ct = params.get('ct') || params.get('src') || 'website';
+      var base = 'https://apps.apple.com/us/app/id6784339562?ct=' + encodeURIComponent(ct);
+      var links = document.querySelectorAll('a[data-appstore]');
+      for (var i = 0; i < links.length; i++) { links[i].href = base; }
+    })();
+  </script>
 </body>
 </html>
